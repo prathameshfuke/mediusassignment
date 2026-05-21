@@ -20,8 +20,8 @@ export default function Card({
       onClick={onClick}
       className={`group relative p-6 rounded-2xl border-2 transition-all duration-300 cursor-pointer ${
         selected
-          ? 'border-better-green bg-better-green-light/20 shadow-md'
-          : 'border-border bg-white hover:border-better-green/40 hover:shadow-md'
+          ? 'border-green-500 bg-green-50/40 shadow-md ring-2 ring-green-500/20 scale-[1.01]'
+          : 'border-border/80 bg-white hover:border-green-500/40 hover:shadow-md hover:-translate-y-0.5'
       } ${className}`}
     >
       {children}

@@ -1,19 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Serif_Display } from "next/font/google";
+import { DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-dm-sans",
   display: "swap",
+  weight: ["400", "500", "700"],
 });
 
-const notoSerif = Noto_Serif_Display({
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-noto-serif",
+  variable: "--font-playfair-display",
   display: "swap",
+  weight: ["400", "500", "600", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -27,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${notoSerif.variable}`}>
-      <body className="antialiased text-text-primary bg-background font-sans min-h-screen flex flex-col">
+    <html lang="en" className={`${dmSans.variable} ${playfairDisplay.variable}`}>
+      <body className="antialiased text-ink bg-cream font-sans min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />

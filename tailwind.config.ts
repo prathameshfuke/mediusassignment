@@ -9,23 +9,37 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        better: {
-          green: "var(--better-green)",
-          "green-light": "var(--better-green-light)",
-          "green-dark": "var(--better-green-dark)",
-          accent: "var(--better-accent)",
-        },
-        text: {
-          primary: "var(--text-primary)",
-          secondary: "var(--text-secondary)",
-        },
-        surface: "var(--surface)",
+        cream: "var(--cream)",
+        ink: "var(--ink)",
+        muted: "var(--muted)",
+        glass: "var(--glass)",
         border: "var(--border)",
+        green: {
+          50: "var(--green-50)",
+          100: "var(--green-100)",
+          500: "var(--green-500)",
+          600: "var(--green-600)",
+          900: "var(--green-900)",
+        },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "sans-serif"],
-        serif: ["var(--font-noto-serif)", "serif"],
+        sans: ["var(--font-dm-sans)", "sans-serif"],
+        serif: ["var(--font-playfair-display)", "serif"],
+      },
+      fontSize: {
+        xs: "var(--text-xs)",
+        sm: "var(--text-sm)",
+        base: "var(--text-base)",
+        lg: "var(--text-lg)",
+        xl: "var(--text-xl)",
+        "2xl": "var(--text-2xl)",
+        hero: "var(--text-hero)",
+      },
+      boxShadow: {
+        sm: "var(--shadow-sm)",
+        md: "var(--shadow-md)",
+        lg: "var(--shadow-lg)",
+        green: "var(--shadow-green)",
       },
     },
   },

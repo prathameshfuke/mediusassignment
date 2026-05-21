@@ -36,41 +36,41 @@ export default function SummaryStep({
     <WizardStep>
       <div className="text-center flex flex-col items-center">
         {/* Success Icon */}
-        <div className="w-16 h-16 rounded-full bg-better-green-light flex items-center justify-center text-better-green mb-6 animate-bounce">
-          <CheckCircle2 size={36} className="fill-current text-white bg-better-green rounded-full" />
+        <div className="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center text-green-500 mb-6 shadow-sm ring-1 ring-black/5 animate-pulse">
+          <CheckCircle2 size={36} className="text-green-500 fill-white" />
         </div>
 
-        <h2 className="font-serif text-2xl sm:text-3xl text-better-green-dark font-bold">
+        <h2 className="font-serif text-2xl sm:text-3xl text-ink font-bold tracking-tight">
           Application Submitted!
         </h2>
-        <p className="text-text-secondary text-sm mt-2 max-w-sm">
+        <p className="text-muted text-sm mt-2 max-w-sm">
           Thank you for choosing Better. Our loan specialists are already reviewing your details.
         </p>
 
         {/* Info Grid */}
-        <div className="w-full bg-surface border border-border rounded-2xl p-6 text-left my-8 space-y-4 shadow-inner">
-          <h3 className="text-xs font-bold text-text-primary uppercase tracking-wider border-b border-border pb-2">
+        <div className="w-full bg-cream border border-border/80 rounded-2xl p-6 text-left my-8 space-y-4 shadow-sm">
+          <h3 className="text-xs font-bold text-ink uppercase tracking-widest border-b border-border pb-2.5 font-sans">
             Your Selections
           </h3>
           
-          <div className="grid grid-cols-2 gap-y-3 text-sm">
-            <span className="text-text-secondary font-medium">Goal:</span>
-            <span className="text-text-primary font-bold text-right">
+          <div className="grid grid-cols-2 gap-y-3 text-sm font-sans">
+            <span className="text-muted font-semibold">Goal:</span>
+            <span className="text-ink font-bold text-right">
               {GOAL_LABELS[goal] || goal}
             </span>
 
-            <span className="text-text-secondary font-medium">Property Use:</span>
-            <span className="text-text-primary font-bold text-right">
+            <span className="text-muted font-semibold">Property Use:</span>
+            <span className="text-ink font-bold text-right">
               {PROPERTY_LABELS[propertyUse] || propertyUse}
             </span>
 
-            <span className="text-text-secondary font-medium">Email:</span>
-            <span className="text-text-primary font-bold text-right break-all">
+            <span className="text-muted font-semibold">Email:</span>
+            <span className="text-ink font-bold text-right break-all">
               {email}
             </span>
 
-            <span className="text-text-secondary font-medium">Phone:</span>
-            <span className="text-text-primary font-bold text-right">
+            <span className="text-muted font-semibold">Phone:</span>
+            <span className="text-ink font-bold text-right font-sans">
               {phone}
             </span>
           </div>
@@ -80,14 +80,14 @@ export default function SummaryStep({
         <div className="w-full flex flex-col sm:flex-row gap-3">
           <Link
             href="/"
-            className="flex-1 bg-better-green hover:bg-better-green-dark text-white font-semibold py-3.5 rounded-xl shadow-md transition-colors flex items-center justify-center space-x-2"
+            className="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-3.5 rounded-xl shadow-md transition-colors flex items-center justify-center space-x-2"
           >
             <HomeIcon size={18} />
             <span>Go to Homepage</span>
           </Link>
           <button
             onClick={onReset}
-            className="flex-1 border border-border hover:bg-gray-50 text-text-primary font-semibold py-3.5 rounded-xl transition-all"
+            className="flex-1 border border-border/80 hover:bg-gray-50 text-ink font-semibold py-3.5 rounded-xl transition-all shadow-sm"
           >
             Start New Quote
           </button>

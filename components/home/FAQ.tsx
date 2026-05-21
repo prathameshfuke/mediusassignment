@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { Plus } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const FAQS = [
@@ -31,9 +31,9 @@ export default function FAQ() {
   };
 
   return (
-    <section className="bg-surface py-20 border-t border-border">
+    <section className="bg-cream py-32 border-t border-border/60">
       <div className="max-w-3xl mx-auto px-6">
-        <h2 className="font-serif text-3xl sm:text-4xl text-better-green-dark text-center mb-12">
+        <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-ink text-center mb-16 font-black">
           Got questions? We&apos;ve got answers.
         </h2>
 
@@ -43,23 +43,26 @@ export default function FAQ() {
             return (
               <div
                 key={faq.question}
-                className="bg-white border border-border rounded-xl overflow-hidden shadow-sm hover:border-better-green/20 transition-all duration-200"
+                className={`border border-border rounded-2xl overflow-hidden shadow-sm transition-all duration-300 ${
+                  isOpen ? 'border-green-500/20 bg-green-50 pl-[1px]' : 'bg-white'
+                }`}
+                style={isOpen ? { borderLeft: '3px solid var(--green-500)' } : undefined}
               >
                 <button
                   onClick={() => toggle(idx)}
-                  className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
+                  className="w-full px-6 py-6 flex items-center justify-between text-left focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-sans font-semibold text-text-primary text-base sm:text-lg">
+                  <span className="font-sans font-medium text-ink text-base sm:text-lg">
                     {faq.question}
                   </span>
-                  <span
-                    className={`text-text-secondary transition-transform duration-300 ${
-                      isOpen ? 'transform rotate-180 text-better-green' : ''
-                    }`}
+                  <motion.span
+                    animate={{ rotate: isOpen ? 45 : 0 }}
+                    transition={{ duration: 0.25, ease: 'easeOut' }}
+                    className="text-muted shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-cream border border-border"
                   >
-                    <ChevronDown size={20} />
-                  </span>
+                    <Plus size={16} />
+                  </motion.span>
                 </button>
 
                 <AnimatePresence initial={false}>
@@ -68,9 +71,9 @@ export default function FAQ() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.25, ease: 'easeInOut' }}
+                      transition={{ duration: 0.28, ease: 'easeInOut' }}
                     >
-                      <div className="px-6 pb-6 pt-1 text-sm text-text-secondary border-t border-gray-50 leading-relaxed">
+                      <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-muted border-t border-border/30 leading-relaxed">
                         {faq.answer}
                       </div>
                     </motion.div>

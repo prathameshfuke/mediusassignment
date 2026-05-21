@@ -15,7 +15,7 @@ interface ToggleProps<T extends string | number> {
 
 export default function Toggle<T extends string | number>({ options, value, onChange }: ToggleProps<T>) {
   return (
-    <div className="flex bg-surface p-1 rounded-full border border-border w-full">
+    <div className="flex bg-gray-100/80 p-1 rounded-full border border-border/60 w-full">
       {options.map((option) => {
         const isSelected = option.value === value;
         return (
@@ -23,10 +23,10 @@ export default function Toggle<T extends string | number>({ options, value, onCh
             key={option.value}
             type="button"
             onClick={() => onChange(option.value)}
-            className={`flex-1 text-center py-2.5 px-4 rounded-full text-sm font-semibold transition-all duration-200 ${
+            className={`flex-1 text-center py-2.5 px-4 rounded-full text-sm font-bold transition-all duration-200 ${
               isSelected
-                ? 'bg-better-green text-white shadow-sm'
-                : 'text-text-primary hover:text-better-green-dark hover:bg-gray-100/50'
+                ? 'bg-green-500 text-white shadow-sm'
+                : 'text-muted hover:text-ink hover:bg-gray-200/40'
             }`}
           >
             {option.label}
