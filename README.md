@@ -4,7 +4,7 @@ A pixel-close, modern, and highly interactive replica of Better.com built using 
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Framework:** Next.js 14 (App Router)
 - **Language:** TypeScript
@@ -16,7 +16,7 @@ A pixel-close, modern, and highly interactive replica of Better.com built using 
 
 ---
 
-## 🛠️ Pages Replicated
+## Pages Replicated
 
 1. **Home Page (`/`):**
    - Sticky navigation header with mobile drawer menu.
@@ -41,7 +41,7 @@ A pixel-close, modern, and highly interactive replica of Better.com built using 
 
 ---
 
-## 💻 Local Setup & Development
+## Local Setup & Development
 
 ### 1. Install Dependencies
 ```bash
@@ -61,7 +61,7 @@ npm run build
 
 ---
 
-## ☁️ Deployment
+## Deployment
 
 Deploy easily to Vercel:
 ```bash
@@ -69,3 +69,4 @@ npm install -g vercel
 vercel --prod
 ```
 Configuration details are predefined in `vercel.json`.
+
