@@ -10,7 +10,22 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        better: {
+          green: "var(--better-green)",
+          "green-light": "var(--better-green-light)",
+          "green-dark": "var(--better-green-dark)",
+          accent: "var(--better-accent)",
+        },
+        text: {
+          primary: "var(--text-primary)",
+          secondary: "var(--text-secondary)",
+        },
+        surface: "var(--surface)",
+        border: "var(--border)",
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", "sans-serif"],
+        serif: ["var(--font-noto-serif)", "serif"],
       },
     },
   },
